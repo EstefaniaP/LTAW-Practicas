@@ -70,4 +70,4 @@ const server = http.createServer(function(req, res) {
 });
 
 server.listen(PUERTO);
-console.log("Servidor de la tienda online escuchando en puerto: " + PUERTO) 
+console.log("Servidor de la tienda online escuchando en puerto: " + PUERTO)
