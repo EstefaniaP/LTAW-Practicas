@@ -56,7 +56,7 @@ const server = http.createServer(function(req, res) {
       //Lanza error
       res.writeHead(404,{'Content-Type': 'text/html'})
       console.log("Petición rechazada: 404 Not Found");
-      resource = "/error.html";
+      resource = "html/error.html";
       data = fs.readFileSync(resource);
       res.write(data);
       res.end();
