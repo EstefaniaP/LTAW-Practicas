@@ -1,7 +1,22 @@
 body{
   background-color: aliceblue;
-  }
-
-#texto{
-  background-color: red;
 }
+  
+#texto{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: rgb(235, 86, 0);
+}
+
+.error{
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+
+
