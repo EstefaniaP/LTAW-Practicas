@@ -306,3 +306,32 @@ border-style: solid;
     border-radius: 21px;
     border-style: solid;
 }
+
+#buho{
+    width: 275px;
+    height: 175px;
+    border-color: rgb(231, 199, 16);
+    border-radius: 21px;
+    border-style: solid;
+}
+#castillo{
+    width: 275px;
+    height: 175px;
+    border-color: rgb(231, 199, 16);
+    border-radius: 21px;
+    border-style: solid;
+}
+#chicos{
+    width: 275px;
+    height: 175px;
+    border-color: rgb(231, 199, 16);
+    border-radius: 21px;
+    border-style: solid;
+}
+#escudo{
+    width: 275px;
+    height: 175px;
+    border-color: rgb(231, 199, 16);
+    border-radius: 21px;
+    border-style: solid;
+}
