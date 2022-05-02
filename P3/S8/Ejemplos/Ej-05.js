@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
  
 //-- Puerto donde lanzar el servidor
-const PORT = 8080;
+const PORT = 2400;
 
 //-- Definir el punto de entrada principal de mi aplicación web
 app.get('/', function (req, res) {
