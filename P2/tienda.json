@@ -1,0 +1,117 @@
+[
+    {
+        "productos": [
+            {
+                "nombre": "TajMajal",
+                "descripcion": "Maqueta arquitectónica del Taj Majal compuesto por 2022 piezas. Medidas(cm): 20x23x22",
+                "stock": 10,
+                "precio": "119.99€"
+                        
+            },
+            {
+                "nombre": "Londres",
+                "descripcion": "Aquitectura más emblemática de Londres. La Galería Nacional, la Columna de Nelson, el London Eye, el Big Ben (la Torre de Isabel) y el Puente de la Torre. Medidas(cm): 15x28x8",
+                "stock": 10,
+                "precio": "39.99€"
+            },
+            {
+                "nombre": "The White House",
+                "descripcion": "Maqueta arquitectónica de la emblemática 'Casa Blanca'. Medidas(cm): 11x47x20",
+                "stock": 10,
+                "precio": "99.99€"
+            },
+            {
+                "nombre": "Singapur",
+                "descripcion": ". Arquitectura más icónica de Singapur. Marina Bay Sands, OCBC Centre y One Raffles Place, el mercado de alimentos Lau Pa Sat, el hotel Fullerton y los superárboles de los Jardines de la Bahía. Medidas(cm): 16x28x9",
+                "stock": 10,
+                "precio": "59.99€"
+            },
+            {
+                "nombre": "Hedwig",
+                "descripcion": "Iconos de Hogwart. Maqueta homenaje al mundo de los magos de Harry Potter presenta numerosos objetos icónicos. Medidas(cm): 44x50x43",
+                "stock": 10,
+                "precio": "249.99€"
+            },
+            {
+                "nombre": "Harry Potter y Hermione Granger",
+                "descripcion": "Modelos en versión gigante de Harry Potter y Hermione Grange. Medidas(cm): 26 cm de altura",
+                "stock": 10,
+                "precio": "129.99€"
+            },
+            {
+                "nombre": "Castillo de Hogwarts",
+                "descripcion": "El Castillo de Hogwarts™ incluye el Gran Comedor, el aula de Defensa Contra las Artes Oscuras, la cámara del tablero de ajedrez y la Cámara Secreta. Medidas(cm): 58x69x43",
+                "stock": 10,
+                "precio": "419.99€"
+            },
+            {
+                "nombre": "Escudo",
+                "descripcion": "Construye un mosaico del escudo de Hogwarts de tu elección (Gryffindor™, Slytherin™, Hufflepuff™ o Ravenclaw™). Medidas(cm): 40 cm de lado",
+                "stock": 10,
+                "precio": "119.99€"
+            },
+            {
+                "nombre": "Transbordador Espacial Discovery",
+                "descripcion": "Maqueta del transbordador espacial Discovery y el telescopio espacial Hubble. Medidas(cm): 21x34x54",
+                "stock": 10,
+                "precio": "249.99€"
+            },
+            {
+                "nombre": "Vespa 125",
+                "descripcion": "Maqueta inspirada en la Vespa Piaggio clásica de la década de 1960. Medidas(cm): 22x35x12",
+                "stock": 10,
+                "precio": "99.99€"
+            },
+            {
+                "nombre": "Saturno",
+                "descripcion": "Maqueta del Apolo Saturno V de la NASA. Cuenta con 3 fases desmontables, incluida la tercera fase (S-IVB) con el módulo lunar y el orbitador lunar. Medidas(cm): 100 altura x 17 de diámetro",
+                "stock": 10,
+                "precio": "119.99€"
+            },
+            {
+                "nombre": "Titanic",
+                "descripcion": "Maqueta a escala 1:200, diseñada en 3 secciones, reproduce fielmente las características del Titanic. Medidas(cm): 46x16x135",
+                "stock": 10,
+                "precio": "419.99€"
+            }
+        ]
+    },
+    {
+        "usuarios": [
+            {
+                "user": "root",
+                "nombre": "Root root",
+                "email": "root@ltaw.com",
+                "password": "123"
+            },
+            {
+                "user": "eportillo",
+                "nombre": "Estefania Portillo Castro",
+                "email": "estefaniaportillo@ltaw.com",
+                "password": "987654"
+            }
+        ]
+    },
+    {
+        "pedidos": [
+            {
+                "user": "root",
+                "dirección": "Paseo de la Castellana, 1",
+                "tarjeta": "1234567890",
+                "productos": [
+                    "Saturno x1",
+                    ""
+                ]
+            },
+            {
+                "user": "eportillo",
+                "dirección": "Calle Serrano,66",
+                "tarjeta": "9876543210",
+                "productos": [
+                    "",
+                    "TajMajal x3"
+                ]
+            }
+        ]
+    }
+]
