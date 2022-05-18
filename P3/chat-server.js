@@ -22,7 +22,7 @@ let user_count = 0;
 //Crear nueva aplicacion web
 const app = express();
 
-//rear un servidor, asociado a la app express
+//crear un servidor, asociado a la app express
 const server = http.Server(app);
 
 //Crear servidor websockets, asociado servidor http
