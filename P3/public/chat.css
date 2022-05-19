@@ -1,10 +1,11 @@
 body{
-    background-color: rgb(120, 27, 101);
+    /*background-color: rgb(120, 27, 101);*/
+    background-image: url(fondo.jpg);
     text-align: center;
 }
 
 h2{
-    color: rgb(181, 239, 181); 
+    color: rgb(104, 3, 72); 
     font-size: 70px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -16,7 +17,7 @@ h3{
 }
 
 #msg_entry{
-    border-color: rgb(242, 156, 215);
+    border-color: rgb(104, 3, 72);
     color: black;
     width: 50%;
     height: 30px;
@@ -28,13 +29,24 @@ h3{
     border-style: outset;
     border-width: 10px;
     border-radius: 15px;
-    border-color: rgb(242, 156, 215);
+    border-color: rgb(104, 3, 72);
     text-align: center;
     height: 500px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
-    color:rgb(241, 238, 231);
+    color:rgb(8, 6, 0);
     overflow: scroll;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 } 
+
+#respuesta{
+    text-align: center;
+    margin-left: 120px ;
+    margin-right: 120px ;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-style: verdana; 
+    color: rgb(0, 0, 0)
+}
