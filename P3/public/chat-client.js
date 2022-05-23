@@ -17,7 +17,7 @@ socket.on("message", (msg)=>{
 //-- Se envia un mensaje al servidor al pulsar el botón
 msg_entry.onchange = () => {
   if (msg_entry.value)
-  socket.send(user + ">> " + msg_entry.value);
+  socket.send(user + " >> " + msg_entry.value);
   write = false;
 
   //-- Borrar el mensaje actual
