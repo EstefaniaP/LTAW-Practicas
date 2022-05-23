@@ -1,7 +1,7 @@
 //-- Elementos del interfaz
 const display = document.getElementById("display");
 const msg_entry = document.getElementById("msg_entry");
-const msg_ = document.getElementById("msg_user");
+const msg_user = document.getElementById("msg_user");
 
 let user = 'Desconocido';
 
