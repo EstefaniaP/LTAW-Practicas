@@ -5,6 +5,8 @@ const msg_user = document.getElementById("msg_user");
 
 let user = 'Desconocido';
 
+let tono = new Audio('tonoMessenger.mp3');
+
 let write = false;
 
 //-- Crear un websocket. Se establece la conexión con el servidor
@@ -12,6 +14,9 @@ const socket = io();
 
 socket.on("message", (msg)=>{
   display.innerHTML += '<p>' + msg + '</p>';
+  if(!msg.includes('está escribiendo')){
+      tono.play();
+  }
 });
 
 //-- Se envia un mensaje al servidor al pulsar el botón
@@ -29,6 +34,7 @@ msg_entry.oninput = () => {
     if(!write){
         write = true;
         socket.send(user + ' está escribiendo');
+
     };
 };
 
