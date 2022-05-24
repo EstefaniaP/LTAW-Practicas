@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="chat.css">
+   
+   <title>Chat</title>
+
+   <!-- Cargar la biblioteca Socket.IO. Nos la debe entregar el servidor -->
+   <script src="/socket.io/socket.io.js"></script>
+
+   <!-- Cliente que usa los Sockets.io-->
+   <script src="chat-client.js" defer></script>
+ </head>
+
+ <body>
+    <h2>Frozen Chat</h2>
+    <div id="respuesta">
+        Introduce nombre de usuario:
+        <input type="text" name="nick" id="msg_user"/>
+        <p></p>
+    </div>
+    <div>
+        <input type="text" placeholder="Introducir mensajes" autocomplete="off" id="msg_entry">
+        <h3>Mensajes recibidos</h3>
+        <p id="display"></p>
+    </div>
+
+   
+ </body>
+ </html>

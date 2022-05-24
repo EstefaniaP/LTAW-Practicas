@@ -1,0 +1,54 @@
+body{
+    /*background-color: rgb(120, 27, 101);*/
+    background-image: url(fondo.jpg);
+    text-align: center;
+}
+
+h2{
+    color: rgb(104, 3, 72); 
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3{
+    color: rgb(104, 3, 72); 
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#msg_entry{
+    border-color: rgb(251, 243, 249);
+    color: black;
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#display{
+    border-style: outset;
+    border-width: 10px;
+    border-radius: 15px;
+    border-color: rgb(251, 243, 249);
+    text-align: center;
+    height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(8, 6, 0);
+    overflow: scroll;
+    font-family: 'Courier New', Courier, monospace;
+} 
+
+#respuesta{
+    text-align: center;
+    font-weight: bold;
+    margin-left: 120px ;
+    margin-right: 120px ;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-style: verdana; 
+    color: rgb(0, 0, 0)
+}
