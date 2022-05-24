@@ -3,8 +3,13 @@ const socket = require('socket.io');
 const http = require('http');
 const express = require('express');
 const colors = require('colors');
+const electron = require('electron');
+const ip = require('ip');
+const process = require('process');
 
 const PUERTO = 9090;
+
+let win = null;
 
 let welcome_message = "¡Bienvenido al chat!";
 let new_user = "Nuevo usuario conectado";
@@ -70,16 +75,25 @@ io.on('connect', (socket) => {
   console.log('** NUEVA CONEXIÓN **'.yellow);
   user_count = user_count + 1;
 
+  //Envia los usuarios al renders
+  win.webContents.send('users', user_count);
+
   //Mensaje bienvenida
   socket.send(welcome_message);
 
   //Mensaje al resto de usuarios de que hay un nuevo usuario en el chat
   io.send(new_user);
 
+  //Se envia al render el mensaje de conexión
+  win.webContents.send('msg_client', welcome_message);
+
   //Evento desconexión
   socket.on('disconnect', function(){
     console.log('** CONEXIÓN TERMINADA **'.yellow);
     user_count -=1;
+
+    //Envia los usuarios al renders
+    win.webContents.send('users', user_count);
 
     io.send(desconected);
  });  
@@ -87,6 +101,10 @@ io.on('connect', (socket) => {
   //Mensaje recibido: Hacer eco
   socket.on("message", (msg)=> {
     console.log("Mensaje Recibido!: " + msg.blue);
+
+    //Envia los usuarios al renders
+    win.webContents.send('msg_client', msg);
+
     msg_text = msg.split(' ')[1];
     if(msg_text.startsWith('/')){
         console.log("Recurso recibido!: " + msg_text.red);
@@ -101,3 +119,60 @@ io.on('connect', (socket) => {
 //Lanzamos servidor HTTP
 server.listen(PUERTO);
 console.log("Escuchando en puerto: " + PUERTO);
+
+//Crea app electron
+electron.app.on('ready', () => {
+  console.log("Evento Ready!");
+
+  //Crea ventana principal de la app
+  win = new electron.BrowserWindow({
+      width: 600,
+      height: 600,  
+
+      //Permitir que la ventana tenga ACCESO AL SISTEMA
+      webPreferences: {
+          nodeIntegration: true,
+          contextIsolation: false
+    }
+
+  });
+
+  //Carga la interfaz gráfica HTML
+  let fichero = "index.html"
+  win.loadFile(fichero);
+
+  //Se obtiene informacion a enviar al renderizador
+  //Se obtienen las versiones
+  node_version = process.versions.node;
+  chrome_version= process.versions.chrome;
+  electron_version = process.versions.electron;
+
+  //Obtiene arquitectura
+  arquitectura = process.arch;
+  //Obtiene plataforma
+  plataforma = process.platform;
+  //Obtiene directorio
+  directorio = process.cwd();
+  //Obtiene direccion IP
+  dir_ip = ip.address();
+
+  //Se reagrupan datos a enviar
+  let datos = [node_version, chrome_version, electron_version, arquitectura, plataforma, directorio,
+              dir_ip, PUERTO, fichero];
+
+  //Esperar a que la página se cargue  con el evento 'ready-to-show'
+  win.on('ready-to-show', () => {
+      console.log("Enviando datos...");
+      //send(nombre evento, mensaje)
+      win.webContents.send('informacion', datos);
+  });
+
+});
+
+//MENSAJES RECIBIDOS
+//Esperar a recibir los mensajes de botón apretado (Mensaje prueba)
+electron.ipcMain.handle('test', (event, msg) => {
+  console.log("-> Mensaje: " + msg);
+  //Se reenvian a todos los clientes conectados
+  io.send(msg);
+});
