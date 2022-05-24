@@ -1,0 +1,85 @@
+body{
+    background-image: url(fondo.jpg);
+    text-align: center;
+}
+
+h2{
+    color: rgb(104, 3, 72); 
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-style: normal;
+    margin-top: 25px;
+}
+
+#btn_test{
+    cursor: pointer;
+    text-align: center;
+    margin: 5px; /*margen entre botones*/
+    padding: 0;
+    font-weight: bold;
+    font-size: 1em; /*tamaño letra dentro de botones*/
+    border: none;
+    border-color: transparent;
+    border-style: outset;
+    border-radius: 8px;
+    background-color: rgb(104, 3, 72);
+    color: rgb(243, 193, 240);
+    font-size: 20px;
+    font-style: courier;
+    margin-top: 50px;
+}
+
+#btn_test:hover{
+    background-color: rgb(236, 239, 248);
+    color: rgb(104, 3, 72);
+}
+
+.blue {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(166, 59, 143);
+    font-style: courier;
+}
+
+#data{
+    text-align: center;
+    font-style: courier;
+    font-size: 15spx;
+    color: rgb(104, 3, 72);
+}
+
+#ip, #users{
+    color: rgb(166, 59, 143);
+    text-align: center;
+    font-style: courier;
+}
+
+#display{
+    border-color: rgb(253, 203, 237);
+    border-style: outset;
+    border-width: 10px;
+    text-align: center;
+    height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color:rgb(104, 3, 72);
+    overflow: scroll;
+    font-style: courier;
+
+}
+
+#titulo{
+    font-style: courier;
+    color: rgb(104, 3, 72);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#msg{
+    font-style: courier;
+    color: rgb(104, 3, 72);
+    font-size: 25px;
+    font-weight: bold;
+}
