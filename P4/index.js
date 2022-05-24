@@ -1,5 +1,6 @@
 //PROCESO RENDERIZADO
 const electron = require('electron');
+const qrcode = require('qrcode');
 
 //-- Obtener elementos de la interfaz
 const version_node = document.getElementById("info1");
@@ -12,6 +13,7 @@ const num_usuarios = document.getElementById("users");
 const dirIP = document.getElementById("ip");
 const boton = document.getElementById("btn_test");
 const mensajes = document.getElementById("display");
+const code = document.getElementById("qrcode");
 
 
 //-- Información del sistema
@@ -27,6 +29,9 @@ electron.ipcRenderer.on('informacion', (event, message) => {
     directorio.textContent = message[5]
     url = ("http://" + message[6] + ":" + message[7] + "/" + message[8]);
     dirIP.textContent = url;
+    qrcode.toDataURL(url,function(err, url){
+        code.src = url;
+    });
 
 });
 
